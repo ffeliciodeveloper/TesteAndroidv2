@@ -30,7 +30,6 @@
                 android:layout_marginEnd="17dp"
                 android:background="#FFFFFFFF"
                 android:hint="@string/hint_user"
-
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -58,16 +57,6 @@
                     android:layout_height="50dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
-            <TextView
-                android:id="@+id/text_view_user_logged"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_input_layout_password"
-                android:layout_marginTop="110dp"
-                android:textAlignment="center"
-                android:textSize="23sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_login"
