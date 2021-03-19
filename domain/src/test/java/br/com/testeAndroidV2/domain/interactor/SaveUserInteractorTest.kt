@@ -21,10 +21,7 @@ class SaveUserInteractorTest {
     @Mock
     private lateinit var preferencesRepository: PreferencesRepository
     private lateinit var schedulers: Schedulers
-
-
     private lateinit var saveUserInteractor: SaveUserInteractor
-
 
     @Before
     fun setUp() {

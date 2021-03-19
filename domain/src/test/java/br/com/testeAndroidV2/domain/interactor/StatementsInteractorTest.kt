@@ -40,7 +40,7 @@ class StatementsInteractorTest {
         val errorResponse = mock(ErrorResponse::class.java)
         val pairResponse = Pair(errorResponse, statementsList)
 
-        `when`(statementsRepository.fetchStatements(anyInt())).thenReturn(Single.just(pairResponse))
+        `when`(statementsRepository.fetchStatementsByUserId(anyInt())).thenReturn(Single.just(pairResponse))
         val result = statementsInteractor.execute(statementsInteractor.Request(152)).test()
 
         result
@@ -48,7 +48,7 @@ class StatementsInteractorTest {
             .assertValue(pairResponse)
             .assertComplete()
 
-        verify(statementsRepository).fetchStatements(152)
+        verify(statementsRepository).fetchStatementsByUserId(152)
     }
 
     @Test
@@ -56,7 +56,7 @@ class StatementsInteractorTest {
 
         val exception = Exception()
 
-        `when`(statementsRepository.fetchStatements(anyInt())).thenReturn(Single.error(exception))
+        `when`(statementsRepository.fetchStatementsByUserId(anyInt())).thenReturn(Single.error(exception))
         val result = statementsInteractor.execute(statementsInteractor.Request(152)).test()
 
         result
@@ -64,6 +64,6 @@ class StatementsInteractorTest {
             .assertError(exception)
             .assertNotComplete()
 
-        verify(statementsRepository).fetchStatements(152)
+        verify(statementsRepository).fetchStatementsByUserId(152)
     }
 }

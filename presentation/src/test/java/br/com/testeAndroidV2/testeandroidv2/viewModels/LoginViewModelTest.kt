@@ -52,7 +52,7 @@ class LoginViewModelTest {
         val pairResult = Pair(userMock, loginError)
 
         `when`(loginInteractor.execute(any())).thenReturn(Single.just(pairResult))
-        loginViewModel.fetUser("teste@teste.com", "Teste#01")
+        loginViewModel.fetchUserByLoginAndPassword("teste@teste.com", "Teste#01")
 
         assertThat(loginViewModel.user.value, `is`(pairResult.first))
     }
@@ -64,7 +64,7 @@ class LoginViewModelTest {
         val pairResult = Pair(userMock, loginError)
 
         `when`(loginInteractor.execute(any())).thenReturn(Single.just(pairResult))
-        loginViewModel.fetUser("teste@teste.com", "Teste#01")
+        loginViewModel.fetchUserByLoginAndPassword("teste@teste.com", "Teste#01")
 
         assertThat(loginViewModel.errorLogin.value, `is`(pairResult.second))
     }
@@ -74,7 +74,7 @@ class LoginViewModelTest {
     fun `when fetch user is fail should be return an exception`() {
         val exception = Exception()
         `when`(loginInteractor.execute(any())).thenReturn(Single.error(exception))
-        loginViewModel.fetUser("user", "123")
+        loginViewModel.fetchUserByLoginAndPassword("user", "123")
 
         assertThat(loginViewModel.error.value, `is`(exception))
     }
