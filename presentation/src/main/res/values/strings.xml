@@ -6,9 +6,10 @@
     <string name="title_recents">Recentes</string>
     <string name="title_account">Conta</string>
     <string name="title_balance">Saldo</string>
-    <string name="msg_invalid_email">Informe um email valido.</string>
-    <string name="msg_invalid_password">A senha deve conter, uma letra maiuscula, um caracter especial e um caracter alfanumérico.</string>
-    <string name="msg_invalid_cpf">Informe um cpf valido.</string>
-    <string name="msg_invalid_email_or_cpf">Informe um email ou cpf valido.</string>
-    <string name="msg_error_save_user">Ocorreu um erro ao salvar o usuario</string>
+    <string name="msg_invalid_email">Informe um email válido.</string>
+    <string name="msg_invalid_password">A senha deve conter, uma letra maiúscula, um caracter especial e um caracter alfanumérico.</string>
+    <string name="msg_login_empty">Preencha o campo de login.</string>
+    <string name="msg_invalid_cpf">Informe um cpf válido.</string>
+    <string name="msg_invalid_email_or_cpf">Informe um email ou cpf válido.</string>
+    <string name="msg_error_save_user">Ocorreu um erro ao salvar o usuário</string>
 </resources>

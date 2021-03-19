@@ -41,7 +41,7 @@ ext {
             targetSdkVersion : 30,
             compileSdkVersion: 30,
             buildToolsVersion: '30.0.2',
-            applicationId    : "br.com.silas.testeandroidv2",
+            applicationId    : "br.com.testeAccentureV2.testeandroidv2",
             versionCode      : 1,
             versionName      : "1.0",
             testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner"
