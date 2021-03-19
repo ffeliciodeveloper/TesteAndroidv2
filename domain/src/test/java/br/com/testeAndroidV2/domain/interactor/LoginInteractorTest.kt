@@ -36,7 +36,7 @@ class LoginInteractorTest {
         val loginError = mock(ErrorResponse::class.java)
 
         val pairResult = Pair(user, loginError)
-        `when`(loginRepository.fetchUser(anyString(), anyString())).thenReturn(Single.just(pairResult))
+        `when`(loginRepository.fetchUserByLoginAndPassword(anyString(), anyString())).thenReturn(Single.just(pairResult))
         val result = loginInteractor
             .execute(loginInteractor.Request("Teste", "1234"))
             .test()
@@ -46,13 +46,13 @@ class LoginInteractorTest {
             .assertNoErrors()
             .assertValue(pairResult)
 
-        verify(loginRepository).fetchUser("Teste", "1234")
+        verify(loginRepository).fetchUserByLoginAndPassword("Teste", "1234")
     }
 
     @Test
     fun `When call to repository and fetch is fail should be return an user`() {
         val exception = Exception()
-        `when`(loginRepository.fetchUser(anyString(), anyString())).thenReturn(
+        `when`(loginRepository.fetchUserByLoginAndPassword(anyString(), anyString())).thenReturn(
             Single.error(
                 exception
             )
@@ -66,6 +66,6 @@ class LoginInteractorTest {
             .assertNoValues()
             .assertError(exception)
 
-        verify(loginRepository).fetchUser("Teste", "1234")
+        verify(loginRepository).fetchUserByLoginAndPassword("Teste", "1234")
     }
 }
