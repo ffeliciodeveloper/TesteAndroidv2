@@ -1,13 +1,14 @@
-#Teste Accenture
+#Accenture
 
-- Para a execução será necessário clonar o projeto e executar na IDE.
+- Para a execução será necessário clonar o projeto e executar na IDE Android Studio.
 
-* O projeto foi separado em módulos para um melhor reaproveitamento de códigos.
-* A arquitetura utilizada foi MVVM com Clean Architecture por facilitar a separação das camadas reduzindo o acoplamento e facilitando os testes.
-* Utilização do framework RxJava para facilitar o trabalho com fluxos de dados, utilização de threads secundarias e tratamento de erros.
-* Utilização da framework Koin por facilitar o trabalho com injeção de dependencia.
-* Utilização do Junit e Mockito por facilitar os mocks e asserções dos testes unitários.
+- A criação do app foi realizado seguindo os passos abaixo, tendo como premissa a utilização das melhores práticas de desenvolvimento e testes unitários:
 
+* Utilização do [Clean Architecture](https://medium.com/android-dev-hacks/detailed-guide-on-android-clean-architecture-9eab262a9011), afim de modularizar as partes do projeto e torná-los independentes da camada de app;
+* Utilização do [MVVM](https://developer.android.com/jetpack/guide?gclid=Cj0KCQjwl9GCBhDvARIsAFunhsk_jqC8TUf6T2vulhTyY40m1p__5m_xhXw9elHVhCNu_jAJROPsztAaAklsEALw_wcB&gclsrc=aw.ds) por facilitar os testes e seguir o padrão do Google para o desenvolvimento dos projetos.
+* Utilização do framework [RxJava](https://github.com/ReactiveX/RxJava) para facilitar o trabalho com fluxos de dados, utilização de threads secundárias e tratamento de erros.
+* Utilização do [Koin](https://insert-koin.io/) para poder facilitar a integração dos módulos e o gerenciamento das dependências do projeto.
+* Utilização do Junit e [Mockito](https://site.mockito.org/) por facilitar os mocks e asserções dos testes unitários.
 
 # Show me the code
 
